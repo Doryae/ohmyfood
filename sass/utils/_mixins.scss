@@ -1,0 +1,5 @@
+@mixin button {
+    height: 50px;
+    color: $white;
+    background: linear-gradient(0deg, $c-primary 0%, $c-secondary 100%); 
+}

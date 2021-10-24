@@ -22,11 +22,13 @@
 
 html {
     font-size: 20px;
+    font-family: "Roboto", sans-serif;
 }
 
 button {
     all: unset;
     cursor: pointer;
+    @include button;
 }
 
 /* header */
@@ -39,8 +41,4 @@ header {
         width: 165px;
         height: 35px;
         }
-}
-
-p {
-    font-family: "Roboto", sans-serif;
 }

@@ -24,11 +24,15 @@
 
 html {
   font-size: 20px;
+  font-family: "Roboto", sans-serif;
 }
 
 button {
   all: unset;
   cursor: pointer;
+  height: 50px;
+  color: #fff;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 
 /* header */
@@ -41,13 +45,9 @@ header img {
   height: 35px;
 }
 
-p {
-  font-family: "Roboto", sans-serif;
-}
-
 .localisation {
   background: #EAEAEA;
-  color: #353535;
+  color: #333;
   height: 50px;
   box-shadow: inset 0px 3px 5px #CFCFCF;
 }
@@ -58,6 +58,31 @@ p {
 .localisation p {
   font-size: 0.9rem;
   transform: translateX(-5px);
+}
+
+.explore {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+  margin: auto;
+  background: #F6F6F6;
+  text-align: center;
+}
+.explore h1 {
+  padding: 40px 55px 20px 55px;
+  font-size: 1.3rem;
+}
+.explore p {
+  color: #333;
+  padding: 0 40px;
+  font-size: 0.8rem;
+}
+.explore button {
+  margin: 35px 0 0 0;
+  padding: 0 20px;
+  border-radius: 50px;
+  box-shadow: #CFCFCF 0px 5px 3px;
 }
 
 /* media queries */
