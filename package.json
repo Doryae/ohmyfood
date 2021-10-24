@@ -1,0 +1,19 @@
+{
+  "name": "taverniersdylan_3_241021",
+  "version": "1.0.0",
+  "description": "Projet 3, Scénario \"Oh My Food\" pour le programme Web-développeur d'OpenClassrooms.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass/style.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Doryae/TaverniersDylan_3_241021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Doryae/TaverniersDylan_3_241021/issues"
+  },
+  "homepage": "https://github.com/Doryae/TaverniersDylan_3_241021#readme"
+}
