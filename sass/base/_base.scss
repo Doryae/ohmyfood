@@ -1,7 +1,46 @@
+/* Fonts for the website */
 
+@font-face {
+    font-family: "Shrikhand";
+    src: url("../../ress/font/Shrikhand-Regular.ttf");
+}
 
-* {
+@font-face {
+    font-family: "Roboto";
+    src: url("../../ress/font/Roboto-Regular.ttf");
+}
+
+/* universal rules + reset of some rules */
+
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+/* header */
+
+header {
+    width: 100%;
+    height: 65px;
+    @extend %flex;
+    img {
+        width: 165px;
+        height: 35px;
+        }
+}
+
+p {
+    font-family: "Roboto", sans-serif;
 }

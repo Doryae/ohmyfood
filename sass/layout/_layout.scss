@@ -1,0 +1,15 @@
+.localisation {
+    @extend %flex;
+    background: $c-bg;
+    color: $c-bg-txt;
+    height: 50px;
+    box-shadow: inset 0px 3px 5px $c-bg-shadow;
+    i {
+        transform: translateX(-25px);
+        font-size: 1.1rem;
+    }
+    p {
+        font-size: 0.9rem;
+        transform: translateX(-5px);
+    }
+}
