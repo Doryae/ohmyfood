@@ -1,4 +1,4 @@
-.localisation, header {
+.location, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +12,10 @@
 @font-face {
   font-family: "Roboto";
   src: url("../../ress/font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("../../ress/font/Roboto-Medium.ttf");
 }
 /* universal rules + reset of some rules */
 *,
@@ -27,12 +31,16 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-family: "Roboto Medium", sans-serif;
+}
+
 button {
   all: unset;
   cursor: pointer;
   height: 50px;
   color: #fff;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(0deg, #9356DC 20%, #FF79DA 100%);
 }
 
 /* header */
@@ -45,17 +53,17 @@ header img {
   height: 35px;
 }
 
-.localisation {
+.location {
   background: #EAEAEA;
   color: #333;
   height: 50px;
   box-shadow: inset 0px 3px 5px #CFCFCF;
 }
-.localisation i {
+.location i {
   transform: translateX(-25px);
   font-size: 1.1rem;
 }
-.localisation p {
+.location p {
   font-size: 0.9rem;
   transform: translateX(-5px);
 }
@@ -83,6 +91,56 @@ header img {
   padding: 0 20px;
   border-radius: 50px;
   box-shadow: #CFCFCF 0px 5px 3px;
+}
+
+.how-to {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-bottom: 65px;
+}
+.how-to h1 {
+  padding-left: 20px;
+  font-size: 1.1rem;
+}
+.how-to .guide-how-to {
+  display: flex;
+  align-items: center;
+  width: 325px;
+  height: 75px;
+  background: #F6F6F6;
+  margin: auto;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 25px;
+  box-shadow: #CFCFCF 0px 5px 3px;
+}
+.how-to .guide-how-to:hover, .how-to .guide-how-to:active {
+  cursor: pointer;
+  background: #f5edff;
+}
+.how-to .guide-how-to:hover i, .how-to .guide-how-to:active i {
+  color: #9356DC;
+}
+.how-to .guide-how-to__circle {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  color: #fff;
+  background: #9356DC;
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 24px;
+}
+.how-to .guide-how-to i {
+  width: 20px;
+  margin-left: 5px;
+  margin-right: 15px;
+  text-align: center;
+  color: #7D7D7D;
 }
 
 /* media queries */

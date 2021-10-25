@@ -1,4 +1,4 @@
-.localisation {
+.location {
     @extend %flex;
     background: $c-bg;
     color: $c-bg-txt;
@@ -36,5 +36,55 @@
         padding: 0 20px;
         border-radius: 50px;
         box-shadow: $c-bg-shadow 0px 5px 3px;
+    }
+}
+
+.how-to {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 65px;
+    h1 {
+        padding-left: 20px;
+        font-size: 1.1rem;
+    }
+    .guide-how-to {
+        display: flex;
+        align-items: center;
+        width: 325px;
+        height: 75px;
+        background: $c-explore-bg;
+        margin: auto;
+        font-size: .9rem;
+        font-weight: bold;
+        border-radius: 25px;
+        box-shadow: $c-bg-shadow 0px 5px 3px;
+        &:hover, &:active {
+            cursor: pointer;
+            background: $c-bg-howto;
+            i {
+                color: $c-primary;
+            }
+        }
+        &__circle {
+            width: 24px;
+            height: 24px;
+            position: relative;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            color: $white;
+            background: $c-primary;
+            font-size: .7rem;
+            text-align: center;
+            line-height: 24px;
+        }
+        i {
+            width: 20px;
+            margin-left: 5px;
+            margin-right: 15px;
+            text-align: center;
+            color: $c-explore-txt;
+        }
     }
 }
