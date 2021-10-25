@@ -62,3 +62,36 @@ header {
 }
 
 /* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 60px;
+    padding-left: 25px;
+    background-color: $c-footer;
+    color: white;
+    font-size: .75rem;
+    h1 {
+        font-family: "Shrikhand", cursive;
+        font-size: .9rem;
+        font-weight: normal;
+        padding: 25px 0 10px 0; 
+    }
+    a, a:visited {
+        color: white;
+        .fa-utensils {
+            padding-right: 10px;
+            font-size: .8rem;
+        }
+        .fa-hands-helping {
+            padding-right: 10px;
+            font-size: .5rem;
+        }
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    &:last-of-type {
+        padding-bottom: 40px;
+    }
+}

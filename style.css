@@ -63,6 +63,40 @@ header img {
 }
 
 /* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 60px;
+  padding-left: 25px;
+  background-color: #353535;
+  color: white;
+  font-size: 0.75rem;
+}
+footer h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 0.9rem;
+  font-weight: normal;
+  padding: 25px 0 10px 0;
+}
+footer a, footer a:visited {
+  color: white;
+}
+footer a .fa-utensils, footer a:visited .fa-utensils {
+  padding-right: 10px;
+  font-size: 0.8rem;
+}
+footer a .fa-hands-helping, footer a:visited .fa-hands-helping {
+  padding-right: 10px;
+  font-size: 0.5rem;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer:last-of-type {
+  padding-bottom: 40px;
+}
+
 /* Lieu */
 .location {
   background: #EAEAEA;
