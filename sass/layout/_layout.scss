@@ -1,3 +1,4 @@
+/* Lieu */
 .location {
     @extend %flex;
     background: $c-bg;
@@ -14,6 +15,7 @@
     }
 }
 
+/* Explorer */
 .explore {
     display: flex;
     align-items: center;
@@ -39,8 +41,9 @@
     }
 }
 
+/* Fonctionnement */
 .how-to {
-    margin-top: 50px;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -85,6 +88,103 @@
             margin-right: 15px;
             text-align: center;
             color: $c-explore-txt;
+        }
+    }
+}
+
+/* Restaurants */
+.restaurant {
+    background: $c-explore-bg;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h1 {
+        padding-left: 20px;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    &__box {
+        display: flex;
+        justify-content: center;
+        transition: .3s;
+        &:hover {
+            transform: scale(1.05);
+        }
+        &--img {
+            width: 325px;
+            height: 175px;
+            border-radius: 20px 20px 0 0px;
+            box-shadow: -4px 3px 5px $c-explore-txt, 4px 3px 5px $c-explore-txt;
+            span {
+                background: $c-tertiary;
+                color: darken($c-tertiary, 30%);
+                font-size: .9rem;
+                font-weight: bold;
+                text-align: center;
+                line-height: 30px;
+                padding: 5px 10px;
+                border-radius: 2px;
+                position: relative;
+                top: 20px;
+                right: -215px;
+            }
+            &.img__palette {
+                background: url("../../ress/img/restaurant/palette.jpg") center/100% no-repeat;
+            }
+            &.img__note {
+                background: url("../../ress/img/restaurant/note.jpg") center/100% no-repeat;
+            }
+            &.img__francaise {
+                background: url("../../ress/img/restaurant/francaise.jpg") center/100% no-repeat;
+            }
+            &.img__delice {
+                background: url("../../ress/img/restaurant/delice.jpg") center/100% no-repeat;
+            }
+        }
+        &--content {
+            height: 75px;
+            background: $white;
+            display: flex;
+            flex-direction: row;
+            border-radius: 0 0 20px 20px;
+            box-shadow: -4px 3px 10px $c-explore-txt, 4px 3px 10px $c-explore-txt;
+            h2 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: .9rem;
+                font-family: "Roboto Light", sans-serif;
+            }
+            &-left {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 80%;
+                padding-left: 10px
+            }
+            &-right {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                font-size: 1.5rem;
+            }
+            .invisible {
+                position: absolute;
+                transform: translateX(-30px);
+                display: none;
+                color: $c-primary;
+            }
+            .visible {
+                transition: .5s;
+                &:hover {
+                    color: $c-primary;
+                    .invisible {
+                        display: inline-block;
+                    }
+                }
+            }
         }
     }
 }

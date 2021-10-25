@@ -17,6 +17,10 @@
   font-family: "Roboto Medium";
   src: url("../../ress/font/Roboto-Medium.ttf");
 }
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../../ress/font/Roboto-Light.ttf");
+}
 /* universal rules + reset of some rules */
 *,
 *::after,
@@ -29,6 +33,11 @@
 html {
   font-size: 20px;
   font-family: "Roboto", sans-serif;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 h1 {
@@ -53,6 +62,8 @@ header img {
   height: 35px;
 }
 
+/* footer */
+/* Lieu */
 .location {
   background: #EAEAEA;
   color: #333;
@@ -68,6 +79,7 @@ header img {
   transform: translateX(-5px);
 }
 
+/* Explorer */
 .explore {
   display: flex;
   align-items: center;
@@ -93,8 +105,9 @@ header img {
   box-shadow: #CFCFCF 0px 5px 3px;
 }
 
+/* Fonctionnement */
 .how-to {
-  margin-top: 50px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -141,6 +154,103 @@ header img {
   margin-right: 15px;
   text-align: center;
   color: #7D7D7D;
+}
+
+/* Restaurants */
+.restaurant {
+  background: #F6F6F6;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.restaurant h1 {
+  padding-left: 20px;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.restaurant__box {
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+}
+.restaurant__box:hover {
+  transform: scale(1.05);
+}
+.restaurant__box--img {
+  width: 325px;
+  height: 175px;
+  border-radius: 20px 20px 0 0px;
+  box-shadow: -4px 3px 5px #7D7D7D, 4px 3px 5px #7D7D7D;
+}
+.restaurant__box--img span {
+  background: #99E2D0;
+  color: #32b091;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  position: relative;
+  top: 20px;
+  right: -215px;
+}
+.restaurant__box--img.img__palette {
+  background: url("../../ress/img/restaurant/palette.jpg") center/100% no-repeat;
+}
+.restaurant__box--img.img__note {
+  background: url("../../ress/img/restaurant/note.jpg") center/100% no-repeat;
+}
+.restaurant__box--img.img__francaise {
+  background: url("../../ress/img/restaurant/francaise.jpg") center/100% no-repeat;
+}
+.restaurant__box--img.img__delice {
+  background: url("../../ress/img/restaurant/delice.jpg") center/100% no-repeat;
+}
+.restaurant__box--content {
+  height: 75px;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0 0 20px 20px;
+  box-shadow: -4px 3px 10px #7D7D7D, 4px 3px 10px #7D7D7D;
+}
+.restaurant__box--content h2 {
+  font-size: 1rem;
+}
+.restaurant__box--content p {
+  font-size: 0.9rem;
+  font-family: "Roboto Light", sans-serif;
+}
+.restaurant__box--content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  padding-left: 10px;
+}
+.restaurant__box--content-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  font-size: 1.5rem;
+}
+.restaurant__box--content .invisible {
+  position: absolute;
+  transform: translateX(-30px);
+  display: none;
+  color: #9356DC;
+}
+.restaurant__box--content .visible {
+  transition: 0.5s;
+}
+.restaurant__box--content .visible:hover {
+  color: #9356DC;
+}
+.restaurant__box--content .visible:hover .invisible {
+  display: inline-block;
 }
 
 /* media queries */
