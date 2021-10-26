@@ -72,7 +72,6 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 60px;
   padding-left: 25px;
   background-color: #353535;
   color: white;
@@ -204,7 +203,7 @@ footer:last-of-type {
 /* Restaurants */
 .restaurant {
   background: #F6F6F6;
-  padding-top: 50px;
+  padding: 50px 0 60px 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -300,27 +299,53 @@ footer:last-of-type {
 
 /* Section Menu des Restaurants (Pages Restaurants) */
 .restaurant__menu {
-  margin-top: -25px;
+  margin-top: -55px;
+  padding-bottom: 60px;
   position: relative;
   display: flex;
+  flex-direction: column;
   z-index: 1;
   width: 100%;
+  max-width: 375px;
   height: auto;
-  background: white;
+  background: #F6F6F6;
+  border-radius: 45px 45px 0 0;
 }
 .restaurant__menu--title {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: baseline;
   width: 100%;
   font-size: 1.3rem;
-  margin: 0 40px 0 20px;
-  padding-top: 35px;
+  padding: 35px 0;
 }
 .restaurant__menu--title h2 {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
   font-size: 1.3rem;
+}
+.restaurant__menu em {
+  font-size: 1.2rem;
+  font-family: "Roboto Light";
+  font-style: normal;
+  text-transform: uppercase;
+  margin-left: 20px;
+  padding-bottom: 5px;
+}
+.restaurant__menu--underline {
+  display: block;
+  height: 4px;
+  width: 60px;
+  background: #99E2D0;
+  margin-left: 20px;
+}
+.restaurant__menu button {
+  width: 55%;
+  margin: auto;
+  text-align: center;
+  border-radius: 25px;
+  margin-bottom: 50px;
 }
 
 /* media queries */
