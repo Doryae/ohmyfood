@@ -59,6 +59,11 @@ header {
         width: 165px;
         height: 35px;
         }
+    a, a:visited {
+        position: absolute;
+        left: 30px;
+        color: $c-bg-txt;
+    }
 }
 
 /* footer */
@@ -93,5 +98,14 @@ footer {
     }
     &:last-of-type {
         padding-bottom: 40px;
+    }
+}
+
+/* main : image des restaurants */
+
+.restaurant__banner{
+    img {
+        object-fit: cover;
+        width: 100%;
     }
 }

@@ -61,6 +61,11 @@ header img {
   width: 165px;
   height: 35px;
 }
+header a, header a:visited {
+  position: absolute;
+  left: 30px;
+  color: #333;
+}
 
 /* footer */
 footer {
@@ -95,6 +100,12 @@ footer a:hover {
 }
 footer:last-of-type {
   padding-bottom: 40px;
+}
+
+/* main : image des restaurants */
+.restaurant__banner img {
+  object-fit: cover;
+  width: 100%;
 }
 
 /* Lieu */
@@ -285,6 +296,31 @@ footer:last-of-type {
 }
 .restaurant__box--content .visible:hover .invisible {
   display: inline-block;
+}
+
+/* Section Menu des Restaurants (Pages Restaurants) */
+.restaurant__menu {
+  margin-top: -25px;
+  position: relative;
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  background: white;
+}
+.restaurant__menu--title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  font-size: 1.3rem;
+  margin: 0 40px 0 20px;
+  padding-top: 35px;
+}
+.restaurant__menu--title h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+  font-size: 1.3rem;
 }
 
 /* media queries */

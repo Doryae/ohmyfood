@@ -188,3 +188,29 @@
         }
     }
 }
+
+/* Section Menu des Restaurants (Pages Restaurants) */ 
+
+.restaurant__menu {
+    margin-top: -25px;
+    position: relative;
+    display: flex;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    background: white;
+    &--title{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 100%;
+        font-size: 1.3rem;
+        margin: 0 40px 0 20px;
+        padding-top: 35px;
+        h2 {
+            font-family: "Shrikhand", cursive;
+            font-weight: normal;
+            font-size: 1.3rem;
+        }
+    }
+}
