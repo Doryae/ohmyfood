@@ -1,0 +1,61 @@
+/* Css uniquement pour la page "contact.html" */
+.contact {
+    display: flex;
+    flex-direction: column;
+    color: $c-tertiary;
+    background: $c-footer;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        h1 {
+            margin: 50px 0 15px 0;
+            font-family: "Shrikhand", cursive;
+        }
+        h2 {
+            margin-bottom: 15px;
+        }
+    }
+    section {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    input, textarea {
+        all:unset;
+        background: $c-bg-shadow;
+        color: $c-bg-txt;
+        padding: 8px 5px;
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+    textarea {
+        width: 100%;
+        height: 200px;
+        word-wrap: break-word;
+    }
+    .send {
+        display: flex;
+        justify-content: center;
+        button {
+        border-radius: 25px;
+        padding: 5px;
+        margin-top: 15px;
+        &:hover {
+            opacity: .9;
+            }
+        }
+    }
+    .return {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        a, a:visited {
+            color: $c-tertiary;
+            font-size: 2rem;
+        }
+    }
+}

@@ -109,3 +109,32 @@ footer {
         height: 265px;
     }
 }
+
+/* loader */ 
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1;
+    background: $c-bg;
+    animation: loader 2s forwards;
+    animation-iteration-count: 1;
+    &__circle{
+        width: 200px;
+        height: 200px;
+        border: 5px solid transparent;
+        border-radius: 50%;
+        border-left-color: $c-primary;
+        border-right-color: $c-secondary;
+        animation: loader-circle 1.5s linear infinite;
+    }
+    p {
+        margin-top: 50px;
+        color: $c-explore-txt;
+    }
+}

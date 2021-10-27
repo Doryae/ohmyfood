@@ -4,6 +4,24 @@
   align-items: center;
 }
 
+@keyframes loader-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes loader {
+  0%, 95% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 /* Fonts for the website */
 @font-face {
   font-family: "Shrikhand";
@@ -106,6 +124,35 @@ footer:last-of-type {
   object-fit: cover;
   width: 100%;
   height: 265px;
+}
+
+/* loader */
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1;
+  background: #EAEAEA;
+  animation: loader 2s forwards;
+  animation-iteration-count: 1;
+}
+.loader__circle {
+  width: 200px;
+  height: 200px;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  border-left-color: #9356DC;
+  border-right-color: #FF79DA;
+  animation: loader-circle 1.5s linear infinite;
+}
+.loader p {
+  margin-top: 50px;
+  color: #7D7D7D;
 }
 
 /* Lieu */
@@ -395,6 +442,68 @@ footer:last-of-type {
 }
 .restaurant__menu button:hover {
   opacity: 0.85;
+}
+
+/* Css uniquement pour la page "contact.html" */
+.contact {
+  display: flex;
+  flex-direction: column;
+  color: #99E2D0;
+  background: #353535;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+}
+.contact header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+}
+.contact header h1 {
+  margin: 50px 0 15px 0;
+  font-family: "Shrikhand", cursive;
+}
+.contact header h2 {
+  margin-bottom: 15px;
+}
+.contact section {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.contact input, .contact textarea {
+  all: unset;
+  background: #CFCFCF;
+  color: #333;
+  padding: 8px 5px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+.contact textarea {
+  width: 100%;
+  height: 200px;
+  word-wrap: break-word;
+}
+.contact .send {
+  display: flex;
+  justify-content: center;
+}
+.contact .send button {
+  border-radius: 25px;
+  padding: 5px;
+  margin-top: 15px;
+}
+.contact .send button:hover {
+  opacity: 0.9;
+}
+.contact .return {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.contact .return a, .contact .return a:visited {
+  color: #99E2D0;
+  font-size: 2rem;
 }
 
 /* media queries */
