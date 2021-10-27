@@ -105,6 +105,7 @@ footer:last-of-type {
 .restaurant__banner img {
   object-fit: cover;
   width: 100%;
+  height: 265px;
 }
 
 /* Lieu */
@@ -325,13 +326,18 @@ footer:last-of-type {
   font-weight: normal;
   font-size: 1.3rem;
 }
-.restaurant__menu em {
+.restaurant__menu--title i:hover {
+  color: #9356DC;
+  cursor: pointer;
+}
+.restaurant__menu h3 {
   font-size: 1.2rem;
   font-family: "Roboto Light";
   font-style: normal;
   text-transform: uppercase;
   margin-left: 20px;
   padding-bottom: 5px;
+  color: #616161;
 }
 .restaurant__menu--underline {
   display: block;
@@ -340,12 +346,55 @@ footer:last-of-type {
   background: #99E2D0;
   margin-left: 20px;
 }
+.restaurant__menu--container .restaurant__menu--box:last-of-type {
+  margin-bottom: 35px;
+}
+.restaurant__menu--box {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  width: 90%;
+  height: auto;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px #CFCFCF;
+}
+.restaurant__menu--box:hover {
+  cursor: pointer;
+}
+.restaurant__menu--box h4 {
+  padding-left: 10px;
+  padding-top: 15px;
+  font-family: "Roboto Medium", sans-serif;
+  font-size: 0.85rem;
+}
+.restaurant__menu--box .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 10px 15px 10px;
+}
+.restaurant__menu--box .price p {
+  max-height: 1rem;
+  font-size: 0.7rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #616161;
+}
+.restaurant__menu--box .price span {
+  padding: 0 20px 0 15px;
+}
 .restaurant__menu button {
   width: 55%;
   margin: auto;
   text-align: center;
   border-radius: 25px;
-  margin-bottom: 50px;
+  margin-top: 45px;
+}
+.restaurant__menu button:hover {
+  opacity: 0.85;
 }
 
 /* media queries */
