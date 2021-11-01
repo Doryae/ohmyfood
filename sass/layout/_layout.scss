@@ -107,6 +107,8 @@
     &__box {
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
         transition: .3s;
         &:hover {
             transform: scale(1.05);
@@ -143,6 +145,7 @@
             }
         }
         &--content {
+            width: 325px;
             height: 75px;
             background: $white;
             display: flex;
@@ -170,30 +173,12 @@
                 width: 20%;
                 font-size: 1.5rem;
             }
-            .test {
-                -webkit-mask-image: url("ress/img/heart-solid.svg");
-                mask-image: url("ress/img/heart-solid.svg");
-                background: linear-gradient(315deg, $c-primary 20%, $c-secondary 100%); 
-            }
             .invisible {
-                position: absolute;
+                @include heart-invisible;
                 transform: translateX(-30px);
-                display: none;
-                color: transparent;
-                -webkit-mask-image: url("ress/img/heart-solid.svg");
-                mask-image: url("ress/img/heart-solid.svg");
-                background: linear-gradient(315deg, $c-primary 20%, $c-secondary 100%);
             }
             .visible {
-                transition: .5s;
-                &:hover {
-                    color: $c-primary;
-                    .invisible {
-                        display: inline-block;
-                        opacity: 0;
-                        animation: menu .5s forwards;
-                    }
-                }
+                @include heart-visible;
             }
         }
     }
@@ -226,9 +211,12 @@
             font-weight: normal;
             font-size: 1.3rem;
         }
-        i:hover {
-            color: $c-primary;
-            cursor: pointer;
+        .invisible {
+            @include heart-invisible;
+            transform: translateX(-25px);
+        }
+        .visible {
+            @include heart-visible;
         }
     }
     h3 {

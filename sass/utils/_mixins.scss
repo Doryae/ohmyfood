@@ -3,3 +3,25 @@
     color: $white;
     background: linear-gradient(0deg, $c-primary 20%, $c-secondary 100%); 
 }
+
+@mixin heart-invisible {
+        position: absolute;
+        display: none;
+        color: transparent;
+        -webkit-mask-image: url("ress/img/heart-solid.svg");
+        mask-image: url("ress/img/heart-solid.svg");
+        background: linear-gradient(315deg, $c-primary 20%, $c-secondary 100%);
+}
+
+@mixin heart-visible {
+        transition: .5s;
+        &:hover {
+            color: $c-primary;
+            cursor: pointer;
+            .invisible {
+                display: inline-block;
+                opacity: 0;
+                animation: menu .5s forwards;
+            }
+        }
+}

@@ -278,6 +278,8 @@ footer:last-of-type {
 .restaurant__box {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   transition: 0.3s;
 }
 .restaurant__box:hover {
@@ -315,6 +317,7 @@ footer:last-of-type {
   background: url("ress/img/restaurant/delice.jpg") center/100% no-repeat;
 }
 .restaurant__box--content {
+  width: 325px;
   height: 75px;
   background: #fff;
   display: flex;
@@ -343,25 +346,21 @@ footer:last-of-type {
   width: 20%;
   font-size: 1.5rem;
 }
-.restaurant__box--content .test {
-  -webkit-mask-image: url("ress/img/heart-solid.svg");
-  mask-image: url("ress/img/heart-solid.svg");
-  background: linear-gradient(315deg, #9356DC 20%, #FF79DA 100%);
-}
 .restaurant__box--content .invisible {
   position: absolute;
-  transform: translateX(-30px);
   display: none;
   color: transparent;
   -webkit-mask-image: url("ress/img/heart-solid.svg");
   mask-image: url("ress/img/heart-solid.svg");
   background: linear-gradient(315deg, #9356DC 20%, #FF79DA 100%);
+  transform: translateX(-30px);
 }
 .restaurant__box--content .visible {
   transition: 0.5s;
 }
 .restaurant__box--content .visible:hover {
   color: #9356DC;
+  cursor: pointer;
 }
 .restaurant__box--content .visible:hover .invisible {
   display: inline-block;
@@ -397,9 +396,26 @@ footer:last-of-type {
   font-weight: normal;
   font-size: 1.3rem;
 }
-.restaurant__menu--title i:hover {
+.restaurant__menu--title .invisible {
+  position: absolute;
+  display: none;
+  color: transparent;
+  -webkit-mask-image: url("ress/img/heart-solid.svg");
+  mask-image: url("ress/img/heart-solid.svg");
+  background: linear-gradient(315deg, #9356DC 20%, #FF79DA 100%);
+  transform: translateX(-25px);
+}
+.restaurant__menu--title .visible {
+  transition: 0.5s;
+}
+.restaurant__menu--title .visible:hover {
   color: #9356DC;
   cursor: pointer;
+}
+.restaurant__menu--title .visible:hover .invisible {
+  display: inline-block;
+  opacity: 0;
+  animation: menu 0.5s forwards;
 }
 .restaurant__menu h3 {
   font-size: 1.2rem;
