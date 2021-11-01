@@ -2,22 +2,22 @@
 
 @font-face {
     font-family: "Shrikhand";
-    src: url("../../ress/font/Shrikhand-Regular.ttf");
+    src: url("ress/font/Shrikhand-Regular.ttf");
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url("../../ress/font/Roboto-Regular.ttf");
+    src: url("ress/font/Roboto-Regular.ttf");
 }
 
 @font-face {
     font-family: "Roboto Medium";
-    src: url("../../ress/font/Roboto-Medium.ttf");
+    src: url("ress/font/Roboto-Medium.ttf");
 }
 
 @font-face {
     font-family: "Roboto Light";
-    src: url("../../ress/font/Roboto-Light.ttf");
+    src: url("ress/font/Roboto-Light.ttf");
 }
 /* universal rules + reset of some rules */
 
@@ -47,6 +47,9 @@ button {
     all: unset;
     cursor: pointer;
     @include button;
+    &:hover {
+        opacity: .85;
+    }
 }
 
 /* header */

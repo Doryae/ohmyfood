@@ -130,16 +130,16 @@
                 right: -215px;
             }
             &.img__palette {
-                background: url("../../ress/img/restaurant/palette.jpg") center/100% no-repeat;
+                background: url("ress/img/restaurant/palette.jpg") center/100% no-repeat;
             }
             &.img__note {
-                background: url("../../ress/img/restaurant/note.jpg") center/100% no-repeat;
+                background: url("ress/img/restaurant/note.jpg") center/100% no-repeat;
             }
             &.img__francaise {
-                background: url("../../ress/img/restaurant/francaise.jpg") center/100% no-repeat;
+                background: url("ress/img/restaurant/francaise.jpg") center/100% no-repeat;
             }
             &.img__delice {
-                background: url("../../ress/img/restaurant/delice.jpg") center/100% no-repeat;
+                background: url("ress/img/restaurant/delice.jpg") center/100% no-repeat;
             }
         }
         &--content {
@@ -170,11 +170,19 @@
                 width: 20%;
                 font-size: 1.5rem;
             }
+            .test {
+                -webkit-mask-image: url("ress/img/heart-solid.svg");
+                mask-image: url("ress/img/heart-solid.svg");
+                background: linear-gradient(315deg, $c-primary 20%, $c-secondary 100%); 
+            }
             .invisible {
                 position: absolute;
                 transform: translateX(-30px);
                 display: none;
-                color: $c-primary;
+                color: transparent;
+                -webkit-mask-image: url("ress/img/heart-solid.svg");
+                mask-image: url("ress/img/heart-solid.svg");
+                background: linear-gradient(315deg, $c-primary 20%, $c-secondary 100%);
             }
             .visible {
                 transition: .5s;
@@ -182,6 +190,8 @@
                     color: $c-primary;
                     .invisible {
                         display: inline-block;
+                        opacity: 0;
+                        animation: menu .5s forwards;
                     }
                 }
             }
@@ -250,6 +260,7 @@
         margin-top: 15px;
         border-radius: 15px;
         box-shadow: 0px 3px 5px $c-bg-shadow;
+        opacity: 0;
         &:hover{
             cursor: pointer;
         }
@@ -277,14 +288,43 @@
             }
         }
     }
+    .animation__box{
+        &--one {
+            animation: menu 1s forwards;
+        }
+        &--two {
+            animation: menu 1s .2s forwards;
+        }
+        &--three {
+            animation: menu 1s .4s forwards;
+        }
+        &--four {
+            animation: menu 1s .6s forwards;
+        }
+        &--five {
+            animation: menu 1s .8s forwards;
+        }
+        &--six {
+            animation: menu 1s 1s forwards;
+        }
+        &--seven {
+            animation: menu 1s 1.2s forwards;
+        }
+        &--eight {
+            animation: menu 1s 1.4s forwards;
+        }
+        &--nine {
+            animation: menu 1s 1.6s forwards;
+        }
+        &--ten {
+            animation: menu 1s 1.8s forwards;
+        }
+    }
     button {
         width: 55%;
         margin: auto;
         text-align: center;
         border-radius: 25px;
         margin-top: 45px;
-        &:hover {
-            opacity: .85;
-        }
     }
 }

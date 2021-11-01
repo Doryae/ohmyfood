@@ -22,22 +22,33 @@
     z-index: -1;
   }
 }
+@keyframes menu {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* Fonts for the website */
 @font-face {
   font-family: "Shrikhand";
-  src: url("../../ress/font/Shrikhand-Regular.ttf");
+  src: url("ress/font/Shrikhand-Regular.ttf");
 }
 @font-face {
   font-family: "Roboto";
-  src: url("../../ress/font/Roboto-Regular.ttf");
+  src: url("ress/font/Roboto-Regular.ttf");
 }
 @font-face {
   font-family: "Roboto Medium";
-  src: url("../../ress/font/Roboto-Medium.ttf");
+  src: url("ress/font/Roboto-Medium.ttf");
 }
 @font-face {
   font-family: "Roboto Light";
-  src: url("../../ress/font/Roboto-Light.ttf");
+  src: url("ress/font/Roboto-Light.ttf");
 }
 /* universal rules + reset of some rules */
 *,
@@ -68,6 +79,9 @@ button {
   height: 50px;
   color: #fff;
   background: linear-gradient(0deg, #9356DC 20%, #FF79DA 100%);
+}
+button:hover {
+  opacity: 0.85;
 }
 
 /* header */
@@ -289,16 +303,16 @@ footer:last-of-type {
   right: -215px;
 }
 .restaurant__box--img.img__palette {
-  background: url("../../ress/img/restaurant/palette.jpg") center/100% no-repeat;
+  background: url("ress/img/restaurant/palette.jpg") center/100% no-repeat;
 }
 .restaurant__box--img.img__note {
-  background: url("../../ress/img/restaurant/note.jpg") center/100% no-repeat;
+  background: url("ress/img/restaurant/note.jpg") center/100% no-repeat;
 }
 .restaurant__box--img.img__francaise {
-  background: url("../../ress/img/restaurant/francaise.jpg") center/100% no-repeat;
+  background: url("ress/img/restaurant/francaise.jpg") center/100% no-repeat;
 }
 .restaurant__box--img.img__delice {
-  background: url("../../ress/img/restaurant/delice.jpg") center/100% no-repeat;
+  background: url("ress/img/restaurant/delice.jpg") center/100% no-repeat;
 }
 .restaurant__box--content {
   height: 75px;
@@ -329,11 +343,19 @@ footer:last-of-type {
   width: 20%;
   font-size: 1.5rem;
 }
+.restaurant__box--content .test {
+  -webkit-mask-image: url("ress/img/heart-solid.svg");
+  mask-image: url("ress/img/heart-solid.svg");
+  background: linear-gradient(315deg, #9356DC 20%, #FF79DA 100%);
+}
 .restaurant__box--content .invisible {
   position: absolute;
   transform: translateX(-30px);
   display: none;
-  color: #9356DC;
+  color: transparent;
+  -webkit-mask-image: url("ress/img/heart-solid.svg");
+  mask-image: url("ress/img/heart-solid.svg");
+  background: linear-gradient(315deg, #9356DC 20%, #FF79DA 100%);
 }
 .restaurant__box--content .visible {
   transition: 0.5s;
@@ -343,6 +365,8 @@ footer:last-of-type {
 }
 .restaurant__box--content .visible:hover .invisible {
   display: inline-block;
+  opacity: 0;
+  animation: menu 0.5s forwards;
 }
 
 /* Section Menu des Restaurants (Pages Restaurants) */
@@ -406,6 +430,7 @@ footer:last-of-type {
   margin-top: 15px;
   border-radius: 15px;
   box-shadow: 0px 3px 5px #CFCFCF;
+  opacity: 0;
 }
 .restaurant__menu--box:hover {
   cursor: pointer;
@@ -433,15 +458,42 @@ footer:last-of-type {
 .restaurant__menu--box .price span {
   padding: 0 20px 0 15px;
 }
+.restaurant__menu .animation__box--one {
+  animation: menu 1s forwards;
+}
+.restaurant__menu .animation__box--two {
+  animation: menu 1s 0.2s forwards;
+}
+.restaurant__menu .animation__box--three {
+  animation: menu 1s 0.4s forwards;
+}
+.restaurant__menu .animation__box--four {
+  animation: menu 1s 0.6s forwards;
+}
+.restaurant__menu .animation__box--five {
+  animation: menu 1s 0.8s forwards;
+}
+.restaurant__menu .animation__box--six {
+  animation: menu 1s 1s forwards;
+}
+.restaurant__menu .animation__box--seven {
+  animation: menu 1s 1.2s forwards;
+}
+.restaurant__menu .animation__box--eight {
+  animation: menu 1s 1.4s forwards;
+}
+.restaurant__menu .animation__box--nine {
+  animation: menu 1s 1.6s forwards;
+}
+.restaurant__menu .animation__box--ten {
+  animation: menu 1s 1.8s forwards;
+}
 .restaurant__menu button {
   width: 55%;
   margin: auto;
   text-align: center;
   border-radius: 25px;
   margin-top: 45px;
-}
-.restaurant__menu button:hover {
-  opacity: 0.85;
 }
 
 /* Css uniquement pour la page "contact.html" */
@@ -461,15 +513,22 @@ footer:last-of-type {
   height: auto;
 }
 .contact header h1 {
-  margin: 50px 0 15px 0;
+  margin: 20px 0 10px 0;
   font-family: "Shrikhand", cursive;
 }
 .contact header h2 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+.contact header hr {
+  width: 100%;
+  color: #99E2D0;
 }
 .contact section {
   margin-left: 25px;
   margin-right: 25px;
+}
+.contact .mail {
+  padding-top: 25px;
 }
 .contact input, .contact textarea {
   all: unset;
@@ -491,7 +550,7 @@ footer:last-of-type {
 .contact .send button {
   border-radius: 25px;
   padding: 5px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .contact .send button:hover {
   opacity: 0.9;
@@ -499,7 +558,7 @@ footer:last-of-type {
 .contact .return {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .contact .return a, .contact .return a:visited {
   color: #99E2D0;

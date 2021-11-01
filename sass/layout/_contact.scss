@@ -13,16 +13,23 @@
         justify-content: center;
         height: auto;
         h1 {
-            margin: 50px 0 15px 0;
+            margin: 20px 0 10px 0;
             font-family: "Shrikhand", cursive;
         }
         h2 {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        hr {
+            width: 100%;
+            color: $c-tertiary;
         }
     }
     section {
         margin-left: 25px;
         margin-right: 25px;
+    }
+    .mail {
+        padding-top: 25px;
     }
     input, textarea {
         all:unset;
@@ -43,7 +50,7 @@
         button {
         border-radius: 25px;
         padding: 5px;
-        margin-top: 15px;
+        margin-top: 10px;
         &:hover {
             opacity: .9;
             }
@@ -52,7 +59,7 @@
     .return {
         display: flex;
         justify-content: center;
-        margin-top: 25px;
+        margin-top: 20px;
         a, a:visited {
             color: $c-tertiary;
             font-size: 2rem;
