@@ -358,11 +358,11 @@ footer:last-of-type {
 .restaurant__box--content .visible {
   transition: 0.5s;
 }
-.restaurant__box--content .visible:hover {
+.restaurant__box--content .visible:hover, .restaurant__box--content .visible:active {
   color: #9356DC;
   cursor: pointer;
 }
-.restaurant__box--content .visible:hover .invisible {
+.restaurant__box--content .visible:hover .invisible, .restaurant__box--content .visible:active .invisible {
   display: inline-block;
   opacity: 0;
   animation: menu 0.5s forwards;
@@ -408,11 +408,11 @@ footer:last-of-type {
 .restaurant__menu--title .visible {
   transition: 0.5s;
 }
-.restaurant__menu--title .visible:hover {
+.restaurant__menu--title .visible:hover, .restaurant__menu--title .visible:active {
   color: #9356DC;
   cursor: pointer;
 }
-.restaurant__menu--title .visible:hover .invisible {
+.restaurant__menu--title .visible:hover .invisible, .restaurant__menu--title .visible:active .invisible {
   display: inline-block;
   opacity: 0;
   animation: menu 0.5s forwards;
@@ -423,6 +423,7 @@ footer:last-of-type {
   font-style: normal;
   text-transform: uppercase;
   margin-left: 20px;
+  margin-top: 30px;
   padding-bottom: 5px;
   color: #616161;
 }
@@ -433,76 +434,103 @@ footer:last-of-type {
   background: #99E2D0;
   margin-left: 20px;
 }
-.restaurant__menu--container .restaurant__menu--box:last-of-type {
-  margin-bottom: 35px;
-}
 .restaurant__menu--box {
   display: flex;
-  flex-direction: column;
   background: #fff;
-  width: 90%;
+  width: 350px;
   height: auto;
   margin: auto;
   margin-top: 15px;
   border-radius: 15px;
   box-shadow: 0px 3px 5px #CFCFCF;
   opacity: 0;
+  overflow: hidden;
+  transition: 0.5s;
 }
-.restaurant__menu--box:hover {
-  cursor: pointer;
+.restaurant__menu--box .dish {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 0.6rem;
+  white-space: nowrap;
+  width: 255px;
 }
-.restaurant__menu--box h4 {
-  padding-left: 10px;
-  padding-top: 15px;
+.restaurant__menu--box .dish h4 {
   font-family: "Roboto Medium", sans-serif;
   font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.restaurant__menu--box .dish p {
+  max-height: 1rem;
+  font-size: 0.7rem;
+  color: #616161;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restaurant__menu--box .price {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 8px 10px 15px 10px;
+  width: 30px;
+  padding-top: 2rem;
+  transform: translateX(40px);
+  transition: 0.5s;
 }
-.restaurant__menu--box .price p {
-  max-height: 1rem;
-  font-size: 0.7rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #616161;
+.restaurant__menu--box .checked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  transition: 0.5s;
+  width: 65px;
+  transform: translateX(65px);
 }
-.restaurant__menu--box .price span {
-  padding: 0 20px 0 15px;
+.restaurant__menu--box .checked i {
+  font-size: 1.25rem;
+  color: #fff;
+  transform: rotate(-360deg);
+  transition: 0.5s;
+}
+.restaurant__menu--box:hover, .restaurant__menu--box:active {
+  cursor: pointer;
+}
+.restaurant__menu--box:hover .price, .restaurant__menu--box:active .price {
+  transform: translateX(-15px);
+}
+.restaurant__menu--box:hover .checked, .restaurant__menu--box:active .checked {
+  transform: translateX(1px);
+}
+.restaurant__menu--box:hover .checked i, .restaurant__menu--box:active .checked i {
+  transform: rotate(0deg);
 }
 .restaurant__menu .animation__box--one {
-  animation: menu 1s forwards;
+  animation: menu 0.8s forwards;
 }
 .restaurant__menu .animation__box--two {
-  animation: menu 1s 0.2s forwards;
+  animation: menu 0.8s 0.3s forwards;
 }
 .restaurant__menu .animation__box--three {
-  animation: menu 1s 0.4s forwards;
+  animation: menu 0.8s 0.6s forwards;
 }
 .restaurant__menu .animation__box--four {
-  animation: menu 1s 0.6s forwards;
+  animation: menu 0.8s 0.9s forwards;
 }
 .restaurant__menu .animation__box--five {
-  animation: menu 1s 0.8s forwards;
+  animation: menu 0.8s 1.2s forwards;
 }
 .restaurant__menu .animation__box--six {
-  animation: menu 1s 1s forwards;
+  animation: menu 0.8s 1.5s forwards;
 }
 .restaurant__menu .animation__box--seven {
-  animation: menu 1s 1.2s forwards;
+  animation: menu 0.8s 1.8s forwards;
 }
 .restaurant__menu .animation__box--eight {
-  animation: menu 1s 1.4s forwards;
+  animation: menu 0.8s 2.1s forwards;
 }
 .restaurant__menu .animation__box--nine {
-  animation: menu 1s 1.6s forwards;
+  animation: menu 0.8s 2.4s forwards;
 }
 .restaurant__menu .animation__box--ten {
-  animation: menu 1s 1.8s forwards;
+  animation: menu 0.8s 2.7s forwards;
 }
 .restaurant__menu button {
   width: 55%;
@@ -510,6 +538,7 @@ footer:last-of-type {
   text-align: center;
   border-radius: 25px;
   margin-top: 45px;
+  display: block;
 }
 
 /* Css uniquement pour la page "contact.html" */

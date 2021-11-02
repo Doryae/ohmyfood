@@ -15,7 +15,7 @@
 
 @mixin heart-visible {
         transition: .5s;
-        &:hover {
+        &:hover, &:active {
             color: $c-primary;
             cursor: pointer;
             .invisible {
