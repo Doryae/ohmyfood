@@ -6,3 +6,118 @@
         min-width: 375px;
     }
 }
+
+@media all and (min-width: 768px) {
+    .restaurant-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer {
+        .footer--flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@media all and (min-width: 950px) {
+    header {
+        img {
+            width: 200px;
+        }
+    }
+    .explore {
+        p {
+            font-size: .9rem;
+        }
+    }
+    .restaurant__box {
+        &--img {
+            width: 375px;
+            height: 200px;
+            span {
+                top: 25px;
+                right: -260px;
+            }
+        }
+        &--content {
+            width: 375px;
+        }
+    }
+    footer {
+        font-size: .85rem;
+        h1 {
+            font-size: 1rem;
+            margin: auto;
+        }
+        a, a:visited {
+            .fa-hands-helping {
+                font-size: .75rem;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1050px) {
+    .how-to--flex {
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 0;
+    }
+    .restaurant-container {
+        gap: 30px;
+    }
+}
+
+@media all and (min-width: 1175px) {
+    header {
+        height: 100px;
+        img {
+            width: 400px;
+            height: 50px;
+        }
+    }
+    .how-to {
+        max-width: 1440px;
+        margin: auto;
+        &--flex {
+            margin: 0 5%;
+        }
+        h1 {
+            margin: auto;
+            font-size: 1.5rem;
+        }
+    }
+
+    .restaurant {
+        .restaurant-container {
+        max-width: 1440px;
+        margin: auto;
+        }
+        h1 {
+            margin: auto;
+            font-size: 1.5rem;
+        }
+        .restaurant__box {
+        &--img {
+            width: 500px;
+            height: 250px;
+            span {
+                top: 35px;
+                right: -365px;
+            }
+        }
+        &--content {
+            width: 500px;
+            height: 100px;
+            }
+        }
+    }
+    footer {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+}
