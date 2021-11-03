@@ -187,14 +187,14 @@
 /* Section Menu des Restaurants (Pages Restaurants) */ 
 
 .restaurant__menu {
-    margin-top: -55px;
+    margin: -55px auto 0 auto;
     padding-bottom: 60px;
     position: relative;
     display: flex;
     flex-direction: column;
     z-index: 1;
     width: 100%;
-    max-width: 375px;
+    min-width: 375px;
     height: auto;
     background: $c-explore-bg;
     border-radius: 45px 45px 0 0;
@@ -239,7 +239,8 @@
     &--box {
         display: flex;
         background: $white;
-        width: 350px;
+        width: 95%;
+        max-width: 450px;
         height: auto;
         margin: auto;
         margin-top: 15px;
@@ -253,7 +254,7 @@
             flex-direction: column;
             padding: .75rem .6rem;
             white-space: nowrap;
-            width: 255px;
+            width: 70%;
             h4 {
             font-family: "Roboto Medium", sans-serif;
             font-size: .85rem;
@@ -271,7 +272,7 @@
         }
         .price {
             display: flex;
-            width: 30px;
+            width: 10%;
             padding-top: 2rem;
             transform: translateX(40px);
             transition: .5s;
@@ -282,8 +283,8 @@
             align-items: center;
             background: $c-tertiary;
             transition: .5s;
-            width: 65px;
-            transform: translateX(65px);
+            width: 20%;
+            transform: translateX(101%);
             i {
                 font-size: 1.25rem;
                 color: $white;

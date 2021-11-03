@@ -370,14 +370,14 @@ footer:last-of-type {
 
 /* Section Menu des Restaurants (Pages Restaurants) */
 .restaurant__menu {
-  margin-top: -55px;
+  margin: -55px auto 0 auto;
   padding-bottom: 60px;
   position: relative;
   display: flex;
   flex-direction: column;
   z-index: 1;
   width: 100%;
-  max-width: 375px;
+  min-width: 375px;
   height: auto;
   background: #F6F6F6;
   border-radius: 45px 45px 0 0;
@@ -437,7 +437,8 @@ footer:last-of-type {
 .restaurant__menu--box {
   display: flex;
   background: #fff;
-  width: 350px;
+  width: 95%;
+  max-width: 450px;
   height: auto;
   margin: auto;
   margin-top: 15px;
@@ -452,7 +453,7 @@ footer:last-of-type {
   flex-direction: column;
   padding: 0.75rem 0.6rem;
   white-space: nowrap;
-  width: 255px;
+  width: 70%;
 }
 .restaurant__menu--box .dish h4 {
   font-family: "Roboto Medium", sans-serif;
@@ -470,7 +471,7 @@ footer:last-of-type {
 }
 .restaurant__menu--box .price {
   display: flex;
-  width: 30px;
+  width: 10%;
   padding-top: 2rem;
   transform: translateX(40px);
   transition: 0.5s;
@@ -481,8 +482,8 @@ footer:last-of-type {
   align-items: center;
   background: #99E2D0;
   transition: 0.5s;
-  width: 65px;
-  transform: translateX(65px);
+  width: 20%;
+  transform: translateX(101%);
 }
 .restaurant__menu--box .checked i {
   font-size: 1.25rem;
