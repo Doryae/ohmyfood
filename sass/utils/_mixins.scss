@@ -1,27 +1,28 @@
 @mixin button {
-    height: 50px;
-    color: $white;
-    background: linear-gradient(0deg, $c-primary 20%, $c-secondary 100%); 
+  height: 50px;
+  color: $white;
+  background: linear-gradient(0deg, $c-primary 20%, $c-secondary 100%);
 }
 
 @mixin heart-invisible {
-        position: absolute;
-        display: none;
-        color: transparent;
-        -webkit-mask-image: url("ress/img/heart-solid.svg");
-        mask-image: url("ress/img/heart-solid.svg");
-        background: linear-gradient(315deg, $c-primary 20%, $c-secondary 100%);
+  position: absolute;
+  display: none;
+  color: transparent;
+  -webkit-mask-image: url("ress/img/heart-solid.svg");
+  mask-image: url("ress/img/heart-solid.svg");
+  background: linear-gradient(315deg, $c-primary 20%, $c-secondary 100%);
 }
 
 @mixin heart-visible {
-        transition: .5s;
-        &:hover, &:active {
-            color: $c-primary;
-            cursor: pointer;
-            .invisible {
-                display: inline-block;
-                opacity: 0;
-                animation: menu .5s forwards;
-            }
-        }
+  transition: 0.5s;
+  &:hover,
+  &:active {
+    color: $c-primary;
+    cursor: pointer;
+    .invisible {
+      display: inline-block;
+      opacity: 0;
+      animation: menu 0.5s forwards;
+    }
+  }
 }

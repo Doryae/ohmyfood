@@ -1,357 +1,363 @@
 /* Lieu */
 .location {
-    @extend %flex;
-    background: $c-bg;
-    color: $c-bg-txt;
-    height: 50px;
-    box-shadow: inset 0px 3px 5px $c-bg-shadow;
-    i {
-        transform: translateX(-25px);
-        font-size: 1.1rem;
-    }
-    p {
-        font-size: 0.9rem;
-        transform: translateX(-5px);
-    }
+  @extend %flex;
+  background: $c-bg;
+  color: $c-bg-txt;
+  height: 50px;
+  box-shadow: inset 0px 3px 5px $c-bg-shadow;
+  i {
+    transform: translateX(-25px);
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.9rem;
+    transform: translateX(-5px);
+  }
 }
 
 /* Explorer */
 .explore {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 300px;
-    margin: auto;
-    background: $c-explore-bg;
-    text-align: center;
-    h1 {
-        padding: 40px 55px 20px 55px;
-        font-size: 1.3rem;
-    }
-    p {
-        color: $c-bg-txt;
-        padding: 0 40px;
-        font-size: .8rem;
-    }
-    button {
-        margin: 35px 0 0 0;
-        padding: 0 20px;
-        border-radius: 50px;
-    }
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+  margin: auto;
+  background: $c-explore-bg;
+  text-align: center;
+  h1 {
+    padding: 40px 55px 20px 55px;
+    font-size: 1.3rem;
+  }
+  p {
+    color: $c-bg-txt;
+    padding: 0 40px;
+    font-size: 0.8rem;
+  }
+  button {
+    margin: 35px 0 0 0;
+    padding: 0 20px;
+    border-radius: 50px;
+  }
 }
 
 /* Fonctionnement */
 .how-to {
-    padding-top: 50px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-bottom: 65px;
+  h1 {
+    padding-left: 20px;
+    font-size: 1.1rem;
+  }
+  &--flex {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding-bottom: 65px;
-    h1 {
-        padding-left: 20px;
-        font-size: 1.1rem;
+  }
+  .guide-how-to {
+    display: flex;
+    align-items: center;
+    width: 325px;
+    height: 75px;
+    background: $c-explore-bg;
+    margin: auto;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: $c-bg-shadow 0px 5px 3px;
+    &:hover,
+    &:active {
+      cursor: pointer;
+      background: $c-bg-howto;
+      i {
+        color: $c-primary;
+      }
     }
-    &--flex {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
+    &__circle {
+      width: 24px;
+      height: 24px;
+      position: relative;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      color: $white;
+      background: $c-primary;
+      font-size: 0.7rem;
+      text-align: center;
+      line-height: 24px;
     }
-    .guide-how-to {
-        display: flex;
-        align-items: center;
-        width: 325px;
-        height: 75px;
-        background: $c-explore-bg;
-        margin: auto;
-        font-size: .9rem;
-        font-weight: bold;
-        border-radius: 25px;
-        box-shadow: $c-bg-shadow 0px 5px 3px;
-        &:hover, &:active {
-            cursor: pointer;
-            background: $c-bg-howto;
-            i {
-                color: $c-primary;
-            }
-        }
-        &__circle {
-            width: 24px;
-            height: 24px;
-            position: relative;
-            transform: translateX(-50%);
-            border-radius: 50%;
-            color: $white;
-            background: $c-primary;
-            font-size: .7rem;
-            text-align: center;
-            line-height: 24px;
-        }
-        i {
-            width: 20px;
-            margin-left: 5px;
-            margin-right: 15px;
-            text-align: center;
-            color: $c-explore-txt;
-        }
+    i {
+      width: 20px;
+      margin-left: 5px;
+      margin-right: 15px;
+      text-align: center;
+      color: $c-explore-txt;
     }
+  }
 }
 
 /* Restaurants */
 .restaurant {
-    background: $c-explore-bg;
-    padding: 50px 0 60px 0;
+  background: $c-explore-bg;
+  padding: 50px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  h1 {
+    padding-left: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  &-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    h1 {
-        padding-left: 20px;
-        font-size: 1.1rem;
-        margin-bottom: 10px;
+  }
+  &__box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.05);
     }
-    &-container {
+    &--img {
+      width: 325px;
+      height: 175px;
+      border-radius: 20px 20px 0 0px;
+      box-shadow: -4px 3px 5px $c-explore-txt, 4px 3px 5px $c-explore-txt;
+      span {
+        background: $c-tertiary;
+        color: darken($c-tertiary, 30%);
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 30px;
+        padding: 5px 10px;
+        border-radius: 2px;
+        position: relative;
+        top: 20px;
+        right: -215px;
+      }
+      &.img__palette {
+        background: url("ress/img/restaurant/palette.jpg") center/100% no-repeat;
+      }
+      &.img__note {
+        background: url("ress/img/restaurant/note.jpg") center/100% no-repeat;
+      }
+      &.img__francaise {
+        background: url("ress/img/restaurant/francaise.jpg") center/100%
+          no-repeat;
+      }
+      &.img__delice {
+        background: url("ress/img/restaurant/delice.jpg") center/100% no-repeat;
+      }
+    }
+    &--content {
+      width: 325px;
+      height: 75px;
+      background: $white;
+      display: flex;
+      flex-direction: row;
+      border-radius: 0 0 20px 20px;
+      box-shadow: -4px 3px 10px $c-explore-txt, 4px 3px 10px $c-explore-txt;
+      h2 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 0.9rem;
+        font-family: "Roboto Light", sans-serif;
+      }
+      &-left {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-    }
-    &__box {
+        justify-content: center;
+        width: 80%;
+        padding-left: 10px;
+      }
+      &-right {
         display: flex;
         justify-content: center;
-        flex-direction: column;
         align-items: center;
-        transition: .3s;
-        &:hover {
-            transform: scale(1.05);
-        }
-        &--img {
-            width: 325px;
-            height: 175px;
-            border-radius: 20px 20px 0 0px;
-            box-shadow: -4px 3px 5px $c-explore-txt, 4px 3px 5px $c-explore-txt;
-            span {
-                background: $c-tertiary;
-                color: darken($c-tertiary, 30%);
-                font-size: .9rem;
-                font-weight: bold;
-                text-align: center;
-                line-height: 30px;
-                padding: 5px 10px;
-                border-radius: 2px;
-                position: relative;
-                top: 20px;
-                right: -215px;
-            }
-            &.img__palette {
-                background: url("ress/img/restaurant/palette.jpg") center/100% no-repeat;
-            }
-            &.img__note {
-                background: url("ress/img/restaurant/note.jpg") center/100% no-repeat;
-            }
-            &.img__francaise {
-                background: url("ress/img/restaurant/francaise.jpg") center/100% no-repeat;
-            }
-            &.img__delice {
-                background: url("ress/img/restaurant/delice.jpg") center/100% no-repeat;
-            }
-        }
-        &--content {
-            width: 325px;
-            height: 75px;
-            background: $white;
-            display: flex;
-            flex-direction: row;
-            border-radius: 0 0 20px 20px;
-            box-shadow: -4px 3px 10px $c-explore-txt, 4px 3px 10px $c-explore-txt;
-            h2 {
-                font-size: 1rem;
-            }
-            p {
-                font-size: .9rem;
-                font-family: "Roboto Light", sans-serif;
-            }
-            &-left {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 80%;
-                padding-left: 10px
-            }
-            &-right {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 20%;
-                font-size: 1.5rem;
-            }
-            .invisible {
-                @include heart-invisible;
-                transform: translateX(-30px);
-            }
-            .visible {
-                @include heart-visible;
-            }
-        }
+        width: 20%;
+        font-size: 1.5rem;
+      }
+      .invisible {
+        @include heart-invisible;
+        transform: translateX(-30px);
+      }
+      .visible {
+        @include heart-visible;
+      }
     }
+  }
 }
 
-/* Section Menu des Restaurants (Pages Restaurants) */ 
+/* Section Menu des Restaurants (Pages Restaurants) */
+main {
+  background: $c-explore-bg;
+}
 
 .restaurant__menu {
-    margin: -55px auto 0 auto;
-    padding-bottom: 60px;
-    position: relative;
+  margin: -55px auto 0 auto;
+  padding-bottom: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  width: 100%;
+  min-width: 375px;
+  height: auto;
+  background: $c-explore-bg;
+  border-radius: 45px 45px 0 0;
+  &--title {
     display: flex;
-    flex-direction: column;
-    z-index: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
     width: 100%;
-    min-width: 375px;
+    font-size: 1.3rem;
+    padding: 35px 0;
+    h2 {
+      font-family: "Shrikhand", cursive;
+      font-weight: normal;
+      font-size: 1.3rem;
+    }
+    .invisible {
+      @include heart-invisible;
+      transform: translateX(-25px);
+    }
+    .visible {
+      @include heart-visible;
+    }
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-family: "Roboto Light";
+    font-style: normal;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-top: 30px;
+    padding-bottom: 5px;
+    color: $c-bg-txt-light;
+  }
+  &--underline {
+    display: block;
+    height: 4px;
+    width: 60px;
+    background: $c-tertiary;
+    margin-left: 20px;
+  }
+  &--box {
+    display: flex;
+    background: $white;
+    width: 95%;
+    max-width: 450px;
     height: auto;
-    background: $c-explore-bg;
-    border-radius: 45px 45px 0 0;
-    &--title{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: baseline;
-        width: 100%;
-        font-size: 1.3rem;
-        padding: 35px 0;
-        h2 {
-            font-family: "Shrikhand", cursive;
-            font-weight: normal;
-            font-size: 1.3rem;
-        }
-        .invisible {
-            @include heart-invisible;
-            transform: translateX(-25px);
-        }
-        .visible {
-            @include heart-visible;
-        }
-    }
-    h3 {
-        font-size: 1.2rem;
-        font-family: "Roboto Light";
-        font-style: normal;
-        text-transform: uppercase;
-        margin-left: 20px;
-        margin-top: 30px;
-        padding-bottom: 5px;
-        color: $c-bg-txt-light;
-    }
-    &--underline {
-        display: block;
-        height: 4px;
-        width: 60px;
-        background: $c-tertiary;
-        margin-left: 20px;
-    }
-    &--box {
-        display: flex;
-        background: $white;
-        width: 95%;
-        max-width: 450px;
-        height: auto;
-        margin: auto;
-        margin-top: 15px;
-        border-radius: 15px;
-        box-shadow: 0px 3px 5px $c-bg-shadow;
-        opacity: 0;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px $c-bg-shadow;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    .dish {
+      display: flex;
+      flex-direction: column;
+      padding: 0.75rem 0.6rem;
+      white-space: nowrap;
+      width: 70%;
+      h4 {
+        font-family: "Roboto Medium", sans-serif;
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
         overflow: hidden;
-        transition: .5s;
-        .dish {
-            display: flex;
-            flex-direction: column;
-            padding: .75rem .6rem;
-            white-space: nowrap;
-            width: 70%;
-            h4 {
-            font-family: "Roboto Medium", sans-serif;
-            font-size: .85rem;
-            margin-bottom: .5rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            }
-            p {
-                max-height: 1rem;
-                font-size: .7rem;
-                color: $c-bg-txt-light;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        }
-        .price {
-            display: flex;
-            width: 10%;
-            padding-top: 2rem;
-            transform: translateX(40px);
-            transition: .5s;
-        }
-        .checked {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: $c-tertiary;
-            transition: .5s;
-            width: 20%;
-            transform: translateX(101%);
-            i {
-                font-size: 1.25rem;
-                color: $white;
-                transform: rotate(-360deg);
-                transition: .5s;
-            }
-        }
-        &:hover, &:active{
-            cursor: pointer;
-            .price {
-                transform: translateX(-15px);
-            }
-            .checked {
-                transform: translateX(1px);
-                i {
-                    transform: rotate(0deg);
-                }
-            }
-        }
+        text-overflow: ellipsis;
+      }
+      p {
+        max-height: 1rem;
+        font-size: 0.7rem;
+        color: $c-bg-txt-light;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
-    .animation__box{
-        &--one {
-            animation: menu .8s forwards;
-        }
-        &--two {
-            animation: menu .8s .3s forwards;
-        }
-        &--three {
-            animation: menu .8s .6s forwards;
-        }
-        &--four {
-            animation: menu .8s .9s forwards;
-        }
-        &--five {
-            animation: menu .8s 1.2s forwards;
-        }
-        &--six {
-            animation: menu .8s 1.5s forwards;
-        }
-        &--seven {
-            animation: menu .8s 1.8s forwards;
-        }
-        &--eight {
-            animation: menu .8s 2.1s forwards;
-        }
-        &--nine {
-            animation: menu .8s 2.4s forwards;
-        }
-        &--ten {
-            animation: menu .8s 2.7s forwards;
-        }
+    .price {
+      display: flex;
+      width: 10%;
+      padding-top: 2rem;
+      transform: translateX(40px);
+      transition: 0.5s;
     }
-    button {
-        width: 55%;
-        margin: auto;
-        text-align: center;
-        border-radius: 25px;
-        margin-top: 45px;
-        display: block;
+    .checked {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $c-tertiary;
+      transition: 0.5s;
+      width: 20%;
+      transform: translateX(101%);
+      i {
+        font-size: 1.25rem;
+        color: $white;
+        transform: rotate(-360deg);
+        transition: 0.5s;
+      }
     }
+    &:hover,
+    &:active {
+      cursor: pointer;
+      .price {
+        transform: translateX(-15px);
+      }
+      .checked {
+        transform: translateX(1px);
+        i {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+  .animation__box {
+    &--entry-one {
+      animation: menu 0.8s forwards;
+    }
+    &--entry-two {
+      animation: menu 0.8s 0.3s forwards;
+    }
+    &--entry-three {
+      animation: menu 0.8s 0.6s forwards;
+    }
+    &--entry-four {
+      animation: menu 0.8s 0.9s forwards;
+    }
+    &--dish-one {
+      animation: menu 0.8s 0.9s forwards;
+    }
+    &--dish-two {
+      animation: menu 0.8s 1.2s forwards;
+    }
+    &--dish-three {
+      animation: menu 0.8s 1.5s forwards;
+    }
+    &--dessert-one {
+      animation: menu 0.8s 1.8s forwards;
+    }
+    &--dessert-two {
+      animation: menu 0.8s 2.1s forwards;
+    }
+    &--dessert-three {
+      animation: menu 0.8s 2.4s forwards;
+    }
+  }
+  button {
+    width: 210px;
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 45px;
+    display: block;
+  }
 }
