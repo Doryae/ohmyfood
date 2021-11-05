@@ -302,6 +302,8 @@ footer:last-of-type {
   flex-direction: column;
   align-items: center;
   transition: 0.3s;
+  border-radius: 20px;
+  box-shadow: -5px 3px 5px #CFCFCF, 5px 3px 5px #CFCFCF;
 }
 .restaurant__box:hover {
   transform: scale(1.05);
@@ -310,7 +312,6 @@ footer:last-of-type {
   width: 325px;
   height: 175px;
   border-radius: 20px 20px 0 0px;
-  box-shadow: -4px 3px 5px #7D7D7D, 4px 3px 5px #7D7D7D;
 }
 .restaurant__box--img span {
   background: #99E2D0;
@@ -344,7 +345,6 @@ footer:last-of-type {
   display: flex;
   flex-direction: row;
   border-radius: 0 0 20px 20px;
-  box-shadow: -4px 3px 10px #7D7D7D, 4px 3px 10px #7D7D7D;
 }
 .restaurant__box--content h2 {
   font-size: 1rem;
@@ -353,7 +353,7 @@ footer:last-of-type {
   font-size: 0.9rem;
   font-family: "Roboto Light", sans-serif;
 }
-.restaurant__box--content-left {
+.restaurant__box--content a, .restaurant__box--content a:visited {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -685,6 +685,19 @@ header a:visited {
     justify-content: space-evenly;
   }
 }
+@media all and (min-width: 900px) {
+  .how-to h1 {
+    margin: auto;
+  }
+
+  .restaurant h1 {
+    margin: auto;
+  }
+}
+footer h1 {
+  margin: auto;
+}
+
 @media all and (min-width: 950px) {
   header img {
     width: 200px;
@@ -733,7 +746,6 @@ header a:visited {
   }
   footer h1 {
     font-size: 1rem;
-    margin: auto;
   }
   footer a .fa-hands-helping,
 footer a:visited .fa-hands-helping {
@@ -779,7 +791,6 @@ header a:visited {
     margin: 0 5%;
   }
   .how-to h1 {
-    margin: auto;
     font-size: 1.5rem;
   }
 
@@ -788,7 +799,6 @@ header a:visited {
     margin: auto;
   }
   .restaurant h1 {
-    margin: auto;
     font-size: 1.5rem;
   }
   .restaurant .restaurant__box--img {
@@ -834,31 +844,31 @@ header a:visited {
     animation: menu 0.8s forwards;
   }
   .restaurant__menu .animation__box--entry-two {
-    animation: menu 0.8s 0.5s forwards;
+    animation: menu 0.8s 0.3s forwards;
   }
   .restaurant__menu .animation__box--entry-three {
-    animation: menu 0.8s 1s forwards;
+    animation: menu 0.8s 0.6s forwards;
   }
   .restaurant__menu .animation__box--entry-four {
-    animation: menu 0.8s 1.5s forwards;
+    animation: menu 0.8s 0.9s forwards;
   }
   .restaurant__menu .animation__box--dish-one {
     animation: menu 0.8s forwards;
   }
   .restaurant__menu .animation__box--dish-two {
-    animation: menu 0.8s 0.5s forwards;
+    animation: menu 0.8s 0.3s forwards;
   }
   .restaurant__menu .animation__box--dish-three {
-    animation: menu 0.8s 1s forwards;
+    animation: menu 0.8s 0.6s forwards;
   }
   .restaurant__menu .animation__box--dessert-one {
     animation: menu 0.8s forwards;
   }
   .restaurant__menu .animation__box--dessert-two {
-    animation: menu 0.8s 0.5s forwards;
+    animation: menu 0.8s 0.3s forwards;
   }
   .restaurant__menu .animation__box--dessert-three {
-    animation: menu 0.8s 1s forwards;
+    animation: menu 0.8s 0.6s forwards;
   }
 
   .restaurant__banner img {

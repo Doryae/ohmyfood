@@ -50,6 +50,25 @@
   }
 }
 
+@media all and (min-width: 900px) {
+  .how-to {
+    h1 {
+      margin: auto;
+    }
+  }
+  .restaurant {
+    h1 {
+      margin: auto;
+    }
+  }
+}
+
+footer {
+  h1 {
+    margin: auto;
+  }
+}
+
 @media all and (min-width: 950px) {
   header {
     img {
@@ -103,7 +122,6 @@
     font-size: 0.85rem;
     h1 {
       font-size: 1rem;
-      margin: auto;
     }
     a,
     a:visited {
@@ -150,7 +168,6 @@
       margin: 0 5%;
     }
     h1 {
-      margin: auto;
       font-size: 1.5rem;
     }
   }
@@ -161,7 +178,6 @@
       margin: auto;
     }
     h1 {
-      margin: auto;
       font-size: 1.5rem;
     }
     .restaurant__box {
@@ -212,31 +228,31 @@
           animation: menu 0.8s forwards;
         }
         &--entry-two {
-          animation: menu 0.8s 0.5s forwards;
+          animation: menu 0.8s 0.3s forwards;
         }
         &--entry-three {
-          animation: menu 0.8s 1s forwards;
+          animation: menu 0.8s .6s forwards;
         }
         &--entry-four {
-          animation: menu 0.8s 1.5s forwards;
+          animation: menu 0.8s .9s forwards;
         }
         &--dish-one {
           animation: menu 0.8s forwards;
         }
         &--dish-two {
-          animation: menu 0.8s .5s forwards;
+          animation: menu 0.8s .3s forwards;
         }
         &--dish-three {
-          animation: menu 0.8s 1s forwards;
+          animation: menu 0.8s .6s forwards;
         }
         &--dessert-one {
           animation: menu 0.8s forwards;
         }
         &--dessert-two {
-          animation: menu 0.8s 0.5s forwards;
+          animation: menu 0.8s 0.3s forwards;
         }
         &--dessert-three {
-          animation: menu 0.8s 1s forwards;
+          animation: menu 0.8s .6s forwards;
         }
       }
   }

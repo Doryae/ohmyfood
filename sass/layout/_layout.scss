@@ -120,6 +120,8 @@
     flex-direction: column;
     align-items: center;
     transition: 0.3s;
+    border-radius: 20px;
+    box-shadow: -5px 3px 5px $c-bg-shadow, 5px 3px 5px $c-bg-shadow;
     &:hover {
       transform: scale(1.05);
     }
@@ -127,7 +129,6 @@
       width: 325px;
       height: 175px;
       border-radius: 20px 20px 0 0px;
-      box-shadow: -4px 3px 5px $c-explore-txt, 4px 3px 5px $c-explore-txt;
       span {
         background: $c-tertiary;
         color: darken($c-tertiary, 30%);
@@ -162,7 +163,6 @@
       display: flex;
       flex-direction: row;
       border-radius: 0 0 20px 20px;
-      box-shadow: -4px 3px 10px $c-explore-txt, 4px 3px 10px $c-explore-txt;
       h2 {
         font-size: 1rem;
       }
@@ -170,7 +170,7 @@
         font-size: 0.9rem;
         font-family: "Roboto Light", sans-serif;
       }
-      &-left {
+      a, a:visited {
         display: flex;
         flex-direction: column;
         justify-content: center;
