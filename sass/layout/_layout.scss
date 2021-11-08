@@ -122,6 +122,8 @@
     transition: 0.3s;
     border-radius: 20px;
     box-shadow: -5px 3px 5px $c-bg-shadow, 5px 3px 5px $c-bg-shadow;
+    width: 325px;
+    margin: auto;
     &:hover {
       transform: scale(1.05);
     }
@@ -268,7 +270,7 @@ main {
       flex-direction: column;
       padding: 0.75rem 0.6rem;
       white-space: nowrap;
-      width: 90%;
+      width: 100%;
       transition: .5s;
       h4 {
         font-family: "Roboto Medium", sans-serif;
@@ -284,13 +286,18 @@ main {
         overflow: hidden;
         text-overflow: ellipsis;
       }
+      
+    }
+    .summary {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      transition: .5s;
     }
     .price {
-      display: flex;
-      width: 10%;
-      padding-top: 2rem;
+      position: relative;
+      left: 5px;
       transition: 0.5s;
-      padding-left: .75rem;
     }
     .checked {
       display: flex;
@@ -311,14 +318,11 @@ main {
     &:active {
       cursor: pointer;
       .dish {
-        width: calc(90% - 70px);
-      }
-      .price {
-        transform: translateX(-25px);
+        width: calc(90% - 35px);
       }
       .checked {
         transform: translateX(1px);
-        width: 70px;
+        width: 80px;
         i {
           transform: rotate(0deg);
         }
