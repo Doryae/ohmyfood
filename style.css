@@ -531,7 +531,7 @@ main {
 }
 .restaurant__menu--box:hover .checked, .restaurant__menu--box:active .checked {
   transform: translateX(1px);
-  width: 80px;
+  width: 70px;
 }
 .restaurant__menu--box:hover .checked i, .restaurant__menu--box:active .checked i {
   transform: rotate(0deg);
