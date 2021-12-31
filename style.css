@@ -464,8 +464,7 @@ main {
 .restaurant__menu--box {
   display: flex;
   background: #fff;
-  width: 95%;
-  max-width: 450px;
+  width: 350px;
   height: auto;
   margin: auto;
   margin-top: 15px;
